@@ -47,19 +47,18 @@ function App() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setHasSearched(true);
 
     if (!validateInput()) return;
 
     getPemberianLampung({
       variables: { input: formInput },
       onCompleted: (data) => {
-        setHasSearched(true); // ✅ Set di sini
         if (!data || !data.getPemberianLampung) {
           window.alert("❌ Data tidak ditemukan. Pastikan NISN dan NIK sesuai.");
         }
       },
       onError: (error) => {
-        setHasSearched(true); // ✅ Walau error, tetap dianggap sudah mencari
         console.error("GraphQL error:", error.message);
         window.alert("❌ Data tidak ditemukan. Pastikan NISN dan NIK sesuai.");
       }
