@@ -19,7 +19,7 @@ function App() {
   const [errors, setErrors] = useState<string[]>([]);
   const [hasSearched, setHasSearched] = useState(false); // <-- Pindahkan ke sini!
 
-  const [getPemberianLampung, { loading, error, data }] = useLazyQuery<{
+  const [getPemberianLampung, { loading, data }] = useLazyQuery<{
     getPemberianLampung: PemberianLampung;
   }>(GET_PEMBERIAN_LAMPUNG);
 
