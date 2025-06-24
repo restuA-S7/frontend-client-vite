@@ -154,7 +154,7 @@ function App() {
           </div>
         ) : (
           <div className="result-box">
-            <p>
+            <p className="failed-announcement">
               Mohon maaf Anda belum masuk SK PIP tahap pertama sesi 1. 
               Apabila sebelumnya telah mengusulkan dan dinyatakan lolos validasi dalam usulan, 
               Anda dapat berpeluang masuk SK PIP tahap pertama sesi 2 di bulan Juli 2025.

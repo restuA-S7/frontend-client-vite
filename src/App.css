@@ -216,6 +216,27 @@ h2 {
   font-size: 1.25rem;
 }
 
+.failed-announcement {
+  background-color: #ffecec; /* merah muda lembut */
+  border-left: 5px solid #e74c3c; /* merah tegas */
+  padding: 1rem 1.25rem 1rem 3rem;
+  margin-top: 1.5rem;
+  border-radius: 12px;
+  color: #6e1f1f;
+  font-size: 0.95rem;
+  position: relative;
+  line-height: 1.6;
+}
+
+.failed-announcement::before {
+  content: "❗";
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  font-size: 1.25rem;
+}
+
+
 .error-box {
   background-color: #ffe6e6;
   border: 1px solid #f5c2c7;
