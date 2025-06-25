@@ -15,4 +15,5 @@ export interface PemberianLampung {
   rombel: string;
   layakPIP: string;
   fase: string;
+  tipeSK: string;
 }

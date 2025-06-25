@@ -14,6 +14,7 @@ export const GET_PEMBERIAN_LAMPUNG = gql`
       rombel
       fase
       layakPIP
+      tipeSK
     }
   }
 `;
