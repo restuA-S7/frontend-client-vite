@@ -108,6 +108,242 @@
     font-size: 0.95rem;
     padding: 1rem;
   }
+} 
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to bottom right, #004d40, #ffffff);
+  color: #222;
+}
+
+.app-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.card {
+  background: #ffffff;
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+  max-width: 550px;
+  width: 100%;
+  box-sizing: border-box;
+  border: 2px solid #d4af37;
+}
+
+h2 {
+  color: #004d40;
+  text-align: center;
+  margin-bottom: 1.75rem;
+  font-weight: 600;
+  font-size: 1.8rem;
+  border-bottom: 2px solid #d4af37;
+  padding-bottom: 0.5rem;
+}
+
+.input {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  margin-bottom: 1.2rem;
+  border: 1.5px solid #ccc;
+  border-radius: 10px;
+  font-size: 1rem;
+  background-color: #f9f9f9;
+  transition: border 0.3s ease;
+}
+
+.input:focus {
+  border-color: #004d40;
+  outline: none;
+  background-color: #ffffff;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 0.85rem;
+  background: linear-gradient(to right, #d4af37, #c5a02e);
+  color: #000000;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 1.05rem;
+  transition: all 0.3s ease;
+}
+
+.submit-button:hover {
+  background: linear-gradient(to right, #c5a02e, #b38f20);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.reset-button {
+  width: 100%;
+  padding: 0.85rem;
+  background: linear-gradient(to right, #004d40, #00695c);
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 1.05rem;
+  transition: all 0.3s ease;
+}
+
+.reset-button:hover {
+  background: linear-gradient(to right, #00695c, #003d33);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.result-box {
+  margin-top: 2rem;
+  background: #f4f4f4;
+  padding: 1.25rem;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  color: #004d40;
+  font-weight: 500;
+}
+
+.important-announcement {
+  background-color: #eefaf4;
+  border-left: 5px solid #2e7d32;
+  padding: 1rem 1.5rem 1rem 3rem;
+  margin-top: 1.5rem;
+  border-radius: 12px;
+  color: #2e7d32;
+  font-size: 0.95rem;
+  position: relative;
+  line-height: 1.6;
+}
+
+.important-announcement::before {
+  content: "📢";
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  font-size: 1.25rem;
+}
+
+.failed-announcement {
+  background-color: #fff0f0;
+  border-left: 5px solid #d32f2f;
+  padding: 1rem 1.5rem 1rem 3rem;
+  margin-top: 1.5rem;
+  border-radius: 12px;
+  color: #b71c1c;
+  font-size: 0.95rem;
+  position: relative;
+  line-height: 1.6;
+}
+
+.failed-announcement::before {
+  content: "❗";
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  font-size: 1.25rem;
+}
+
+.error-box {
+  background-color: #ffe6e6;
+  border: 1px solid #f5c2c7;
+  color: #b02a37;
+  padding: 12px;
+  margin-top: 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.error-box p {
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  .card {
+    padding: 1.5rem;
+  }
+
+  .submit-button,
+  .reset-button {
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+
+  .input {
+    font-size: 1rem;
+    padding: 0.7rem;
+  }
+
+  .result-box {
+    font-size: 0.95rem;
+    padding: 1rem;
+  }
+}
+
+
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.poster-image img {
+  width: 100%;
+  max-width: 480px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  border: 3px solid #d4af37;
+}
+
+
+@media (max-width: 600px) {
+  .card {
+    padding: 1.25rem;
+  }
+
+  .submit-button,
+  .reset-button {
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .input {
+    font-size: 1rem;
+    padding: 0.65rem;
+  }
+
+  .result-box {
+    font-size: 0.95rem;
+    padding: 1rem;
+  }
+
+  .content-wrapper {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .poster-image img {
+    max-width: 400px;
+  }
 } */
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
@@ -199,7 +435,7 @@ h2 {
 .important-announcement {
   background-color: #e6f9f0;
   border-left: 5px solid #2ecc71;
-  padding: 1rem 1.25rem 1rem 3rem; /* ⬅️ padding kiri diperbesar */
+  padding: 1rem 1.25rem 1rem 3rem;
   margin-top: 1.5rem;
   border-radius: 12px;
   color: #2d4739;
@@ -217,8 +453,8 @@ h2 {
 }
 
 .failed-announcement {
-  background-color: #ffecec; /* merah muda lembut */
-  border-left: 5px solid #e74c3c; /* merah tegas */
+  background-color: #ffecec;
+  border-left: 5px solid #e74c3c;
   padding: 1rem 1.25rem 1rem 3rem;
   margin-top: 1.5rem;
   border-radius: 12px;
@@ -252,33 +488,4 @@ h2 {
 
 .error-box p {
   margin: 0;
-}
-
-
-
-@media (max-width: 600px) {
-  .card {
-    padding: 1.25rem;
-  }
-
-  .submit-button,
-  .reset-button {
-    width: 100%;
-    margin-top: 0.5rem;
-  }
-
-  form {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .input {
-    font-size: 1rem;
-    padding: 0.65rem;
-  }
-
-  .result-box {
-    font-size: 0.95rem;
-    padding: 1rem;
-  }
 }
