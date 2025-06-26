@@ -3,6 +3,7 @@ import { useState } from "react";
 import { GET_PEMBERIAN_LAMPUNG } from "./graphql/queries";
 import type { ModelPemberianInput, PemberianLampung } from "./types/gqlTypes";
 import "./App.css";
+import fotoPoster from './assets/foto.jpg';
 
 function App() {
   const [formInput, setFormInput] = useState<ModelPemberianInput>({
@@ -79,7 +80,7 @@ function App() {
     <div className="app-container">
       <div className="content-wrapper">
         <div className="poster-image">
-          <img src="/public/foto.jpg" alt="Poster" />
+          <img src={fotoPoster} alt="Poster" />
         </div>
         <div className="card">
           <h2>🔍 Cek Penerima PIP 2025 dari Aspirasi Dr. H.Muhammad Kadafi, S.H., M.H.</h2>
