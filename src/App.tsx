@@ -77,10 +77,10 @@ function App() {
 
   return (
     <div className="app-container">
-      {/* <div className="content-wrapper">
+      <div className="content-wrapper">
         <div className="poster-image">
           <img src="/public/foto.jpg" alt="Poster" />
-        </div> */}
+        </div>
         <div className="card">
           <h2>🔍 Cek Penerima PIP 2025 dari Aspirasi Dr. H.Muhammad Kadafi, S.H., M.H.</h2>
           <form onSubmit={handleSubmit}>
@@ -165,6 +165,7 @@ function App() {
           )
         )}
         </div>
+      </div>
     </div>
   );
 }
