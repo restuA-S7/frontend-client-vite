@@ -83,7 +83,7 @@ function App() {
           <img src={fotoPoster} alt="Poster" />
         </div>
         <div className="card">
-          <h2>🔍 Cek Penerima PIP 2025 dari Aspirasi Dr. H.Muhammad Kadafi, S.H., M.H.</h2>
+          <h2>🔍 Cek Penerima PIP Aspirasi 2025 Dr. H. Muhammad Kadafi, S.H., M.H.</h2>
           <form onSubmit={handleSubmit}>
             <input
               type="text"
