@@ -1,9 +1,12 @@
 import { useLazyQuery } from "@apollo/client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { GET_PEMBERIAN_LAMPUNG } from "./graphql/queries";
 import type { ModelPemberianInput, PemberianLampung } from "./types/gqlTypes";
 import "./App.css";
 import fotoPoster from './assets/foto.jpg';
+import logoPKB from './assets/logo.svg';
+//import logoPKB from './assets/logoPKB.svg';
+
 
 function App() {
   const [formInput, setFormInput] = useState<ModelPemberianInput>({
@@ -19,6 +22,20 @@ function App() {
   const [getPemberianLampung, { loading, data }] = useLazyQuery<{
     getPemberianLampung: PemberianLampung;
   }>(GET_PEMBERIAN_LAMPUNG);
+
+  const [isLoading, setIsLoading] = useState(true);
+  const [showSplash, setShowSplash] = useState(true); // buat fade out
+
+  useEffect(() => {
+  const timer = setTimeout(() => {
+    setIsLoading(false); // sembunyikan splash content
+    setTimeout(() => {
+      setShowSplash(false); // hapus splash screen dari DOM setelah animasi selesai
+    }, 500); // waktu fade-out cocokkan dengan CSS (0.5s)
+  }, 2000);
+
+  return () => clearTimeout(timer);
+  }, []);
   
   const handleReset = () => {
     setFormInput({ nisn: "", nik: "" });
@@ -75,6 +92,23 @@ function App() {
       }
     });
   };
+
+
+  // if (isLoading) {
+  // return (
+  //   <div className="splash-screen">
+  //     <img src={logoPKB} alt="Loading Poster" className="splash-image" />
+  //   </div>
+  //   );
+  // }
+
+  if (showSplash) {
+  return (
+    <div className={`splash-screen ${!isLoading ? "fade-out" : ""}`}>
+      <img src={logoPKB} alt="Logo PKB" className="splash-image" />
+    </div>
+    );
+  }
 
   return (
     <div className="app-container">
